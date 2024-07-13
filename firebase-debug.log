@@ -1,0 +1,21 @@
+[debug] [2024-07-13T22:26:10.691Z] ----------------------------------------------------------------------
+[debug] [2024-07-13T22:26:10.696Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\lucas\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js init
+[debug] [2024-07-13T22:26:10.697Z] CLI Version:   13.11.3
+[debug] [2024-07-13T22:26:10.697Z] Platform:      win32
+[debug] [2024-07-13T22:26:10.697Z] Node Version:  v20.11.1
+[debug] [2024-07-13T22:26:10.697Z] Time:          Sat Jul 13 2024 19:26:10 GMT-0300 (Horário Padrão de Brasília)
+[debug] [2024-07-13T22:26:10.698Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2024-07-13T22:26:10.708Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2024-07-13T22:26:10.709Z] > authorizing via signed-in user (lucassamppaio779@gmail.com)
+[info] 
+     ######## #### ########  ######## ########     ###     ######  ########
+     ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
+     ######    ##  ########  ######   ########  #########  ######  ######
+     ##        ##  ##    ##  ##       ##     ## ##     ##       ## ##
+     ##       #### ##     ## ######## ########  ##     ##  ######  ########
+
+You're about to initialize a Firebase project in this directory:
+
+  C:\Users\lucas\OneDrive\Documentos\Flutter web\pach_busca-1
+

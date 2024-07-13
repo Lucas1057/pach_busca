@@ -1,7 +1,19 @@
+import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:pach_busca/view/anuncio.dart';
 
-void main() {
+void main()async {
+  WidgetsFlutterBinding.ensureInitialized();
+await Firebase.initializeApp(
+  options: const FirebaseOptions(
+     apiKey: "AIzaSyDA6zpVY2-vBPkMa81g5gEMX0LYPzU59CY",
+      authDomain: "pech-busca.firebaseapp.com",
+      projectId: "pech-busca",
+      storageBucket: "pech-busca.appspot.com",
+      messagingSenderId: "1072421181055",
+      appId: "1:1072421181055:web:452a29bf01210ee41c114a",
+      measurementId: "G-HL2T1NM52Z")
+);
   runApp(const MyApp());
 }
 
