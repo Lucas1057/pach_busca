@@ -21,13 +21,13 @@ colunas= 4;
 return colunas;
   }
   
+ 
   @override
   Widget build(BuildContext context) {
     return LayoutBuilder(
       builder: (context, constraint) {
         var largura = constraint.maxWidth;
         var alturaBarra = AppBar().preferredSize.height;
-
 
         return Scaffold(
             appBar: largura < 600 ? PreferredSize(
@@ -43,9 +43,19 @@ return colunas;
                 crossAxisSpacing: 8,
                 mainAxisSpacing: 8,
               children: [
-               ItemProduto("Relógio","123,97","relogio.Jpg"),
-                ItemProduto("Logo","0","smartphone.Jpg"),
-                 ItemProduto("nNottr","23,97","relogio.Jpg"),
+                
+                ItemProduto("Relógio","123,97", "relogio.Jpg" ),
+                 ItemProduto("Logo","0","smartphone.Jpg"),
+                  ItemProduto("nNottr","23,97","relogio.Jpg"),
+                  ItemProduto("Logo","0","smartphone.Jpg"),
+                  ItemProduto("Logo","0","smartphone.Jpg"),
+                  ItemProduto("Logo","0","smartphone.Jpg"),
+                   ItemProduto("Logo","0","smartphone.Jpg"),
+                  ItemProduto("nNottr","23,97","relogio.Jpg"),
+                  ItemProduto("Logo","0","smartphone.Jpg"),
+                   ItemProduto("Logo","0","smartphone.Jpg"),
+                  ItemProduto("nNottr","23,97","relogio.Jpg"),
+                  ItemProduto("Logo","0","smartphone.Jpg"),
                
               ],),
             ));

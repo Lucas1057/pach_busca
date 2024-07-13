@@ -2,11 +2,11 @@ import 'package:flutter/material.dart';
 
 // ignore: must_be_immutable
 class ItemProduto extends StatelessWidget {
-  String? descricao;
-   String? preco;
- String? imagem;
+ late String descricao;
+  late String preco;
+  late String imagem; 
 
-  ItemProduto(String descricao, String preco, String imagem, {super.key});
+  ItemProduto( this.descricao,  this.preco,  this.imagem, {super.key});// tem que colocar o this
 
  
   
@@ -22,10 +22,10 @@ class ItemProduto extends StatelessWidget {
 padding: const EdgeInsets.all(16),
   child: Column(
     children: [
-      Expanded(flex: 8,
-        child: Image.asset('imagens/$imagem',fit: BoxFit.contain,width: 50,),),
+       Expanded(flex: 8,
+        child: Image.asset('imagens/$imagem',fit: BoxFit.contain,width: 50,),), 
         Expanded(flex: 1,
-        child: Text(descricao!),),
+        child: Text(descricao),),
         Expanded(flex: 1,
         child: Text('R\$ $preco'),)
     ],

@@ -5,8 +5,8 @@ class WebAppBar extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return AppBar(
-      title: Row(
+    return AppBar(backgroundColor: Theme.of(context).colorScheme.inversePrimary,
+      title: Row( 
         children: [
           Image.asset('imagens/logopech.jpg',fit: BoxFit.contain,width: 50,),
           Expanded(child: Container()),
