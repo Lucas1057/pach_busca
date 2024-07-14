@@ -15,7 +15,7 @@ class WebAppBar extends StatelessWidget {
                  IconButton(onPressed: (){},
                  icon: const Icon(Icons.shopping_cart_rounded)),
                  OutlinedButton(
-                  onPressed: (){},
+                  onPressed: (){Navigator.pushReplacementNamed(context, '/cadastro');},
                    style: OutlinedButton.styleFrom(backgroundColor: Colors.lightBlueAccent,
                    ),
                    child: const Text('Cadastrar'),

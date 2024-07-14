@@ -1,5 +1,6 @@
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
+import 'package:pach_busca/cadastro.dart';
 import 'package:pach_busca/view/anuncio.dart';
 
 void main()async {
@@ -30,6 +31,11 @@ class MyApp extends StatelessWidget {
       ),
       home:  const Anuncios(),
       debugShowCheckedModeBanner: false,
+      initialRoute: '/',
+      routes: {
+        '/anuncios': (context) => const Anuncios(),
+        '/cadastro': (context) => const Cadastro(),
+      } ,
     );
   }
 }
