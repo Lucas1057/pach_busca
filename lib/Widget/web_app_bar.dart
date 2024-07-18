@@ -1,14 +1,21 @@
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
+import 'package:pach_busca/login.dart';
 
 class WebAppBar extends StatelessWidget {
   const WebAppBar({super.key});
 
   @override
   Widget build(BuildContext context) {
+    FirebaseAuth auth = FirebaseAuth.instance;
+    User? usuario = auth.currentUser;
+   late String? nomeUsuario = usuario!.displayName;
+    Login login = Login();
     return AppBar(backgroundColor: Theme.of(context).colorScheme.inversePrimary,
       title: Row( 
         children: [
           Image.asset('imagens/logopech.jpg',fit: BoxFit.contain,width: 50,),
+          Text(nomeUsuario!) ,
           Expanded(child: Container()),
            IconButton(onPressed: (){},
                  icon: const Icon(Icons.search)),
@@ -25,7 +32,9 @@ class WebAppBar extends StatelessWidget {
                    style: OutlinedButton.styleFrom(backgroundColor: Colors.orange,
                    ),
                    child: const Text('Entrar'),
-                   )
+                   ),TextButton(onPressed:(){
+                    login.deslogar();
+                   }, child: const Text("Deslogar"),),
         ],
       ),
     );
