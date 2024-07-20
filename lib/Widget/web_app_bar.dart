@@ -11,11 +11,17 @@ class WebAppBar extends StatelessWidget {
     User? usuario = auth.currentUser;
    late String? nomeUsuario = usuario!.displayName;
     Login login = Login();
+     bool usuarioLogado;
+     if(usuario != null){
+usuarioLogado = true;
+     }else{
+      usuarioLogado = false;
+     }
     return AppBar(backgroundColor: Theme.of(context).colorScheme.inversePrimary,
       title: Row( 
         children: [
-          Image.asset('imagens/logopech.jpg',fit: BoxFit.contain,width: 50,),
-          Text(nomeUsuario!) ,
+                    Image.asset('imagens/logopech.jpg',fit: BoxFit.contain,width: 50,),
+         /*  Text(nomeUsuario!), */
           Expanded(child: Container()),
            IconButton(onPressed: (){},
                  icon: const Icon(Icons.search)),

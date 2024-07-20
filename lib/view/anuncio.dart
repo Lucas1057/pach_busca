@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:pach_busca/Widget/item_produto.dart';
 import 'package:pach_busca/Widget/mobile_app_bar.dart';
 import 'package:pach_busca/Widget/web_app_bar.dart';
+import 'package:pach_busca/componentes/menus.dart';
 class Anuncios extends StatefulWidget {
   const Anuncios({super.key});
 
@@ -20,8 +21,6 @@ colunas= 4;
 }
 return colunas;
   }
-  
- 
   @override
   Widget build(BuildContext context) {
     return LayoutBuilder(
@@ -29,7 +28,7 @@ return colunas;
         var largura = constraint.maxWidth;
         var alturaBarra = AppBar().preferredSize.height;
 
-        return Scaffold(
+        return Scaffold(drawer: Menus(),
             appBar: largura < 600 ? PreferredSize(
               preferredSize: Size(largura,alturaBarra),
                child: const MobileAppBar())//mobie----------------------------------------

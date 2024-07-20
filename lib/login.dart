@@ -127,7 +127,7 @@ mostrarSnackbar(contexto: (context), texto: " Cadastrado com sucesso", isErro: f
 return null;
           } on FirebaseAuthException catch (e) {
             
-      // print(e.code);
+       print(e.code);
       // print(e.message);
       if(e.code == 'invalid-credential'){
          mostrarSnackbar(contexto: (context), texto: 'Credencial invalida');
@@ -154,7 +154,7 @@ if(erro != null){
 }
 });
 }else{
- /*  print("invalido"); */
+  print("invalido");
 }
   }
 }

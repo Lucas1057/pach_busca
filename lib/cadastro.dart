@@ -5,6 +5,7 @@
 import 'package:firebase_storage/firebase_storage.dart';
 import 'package:flutter/material.dart';
 import 'package:firebase_auth/firebase_auth.dart';
+import 'package:pach_busca/add_imagem.dart';
 import 'package:pach_busca/meu_snackbar.dart';
 import 'package:pach_busca/view/anuncio.dart';
 
@@ -87,7 +88,10 @@ TextFormField(
        Icon(esconderSenha == true ? Icons.visibility : Icons.visibility_off) ,)
   ),obscureText: esconderSenha,
 )
-,ElevatedButton(onPressed: (){cadastrar();}, child: const Text("Cadastrar"))
+,ElevatedButton(onPressed: (){cadastrar();}, child: const Text("Cadastrar")),
+IconButton(onPressed: (){
+  Navigator.push(context, MaterialPageRoute(builder: (context) => const AddImagem(),));
+}, icon: Icon(Icons.photo_album_outlined))
   ],
 )
     );

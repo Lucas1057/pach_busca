@@ -1,7 +1,7 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
-
+import 'package:pach_busca/Widget/produto.dart';
 import 'package:pach_busca/cadastro.dart';
 import 'package:pach_busca/login.dart';
 import 'package:pach_busca/view/anuncio.dart';
@@ -38,6 +38,7 @@ class MyApp extends StatelessWidget {
       routes: {
         '/anuncios': (context) => const Anuncios(),
         '/cadastro': (context) => const Cadastro(),
+        '/login': (context) => Login(),
       } ,
     );
   }
@@ -53,7 +54,7 @@ class RoteadorTea extends StatelessWidget {
         if(snapshot.hasData){
 return const Anuncios();
         }else{
-          return  Login();
+          return  Produto();
         }
       },
     );
